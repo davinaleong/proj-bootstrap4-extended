@@ -1,0 +1,108 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+//Bootstrap variables
+$grays: map-merge((
+    "white": $white,
+    "black": $black
+), $grays);
+
+$theme-colors: map-merge((
+    "indigo": $indigo,
+    "purple": $purple,
+    "pink": $pink,
+    "orange": $orange,
+    "teal": $teal
+), $theme-colors);
+
+$b4e-rgb-red: #f00;
+$b4e-rgb-yellow: #ff0;
+$b4e-rgb-green: #0f0;
+$b4e-rgb-cyan: #0ff;
+$b4e-rgb-blue: #00f;
+$b4e-rgb-magenta: #f0f;
+$b4e-rgb-colors: (
+    "red": $b4e-rgb-red,
+    "yellow": $b4e-rgb-yellow,
+    "green": $b4e-rgb-green,
+    "cyan": $b4e-rgb-cyan,
+    "blue": $b4e-rgb-blue,
+    "magenta": $b4e-rgb-magenta,
+    "black": $black
+);
+$theme-colors: map-merge($b4e-rgb-colors, $theme-colors);
+
+
+//React Bootstrap 4 variables
+$b4e-prefix: 'b4e';
+
+
+$b4e-font-family-sans-serif: $font-family-sans-serif;
+$b4e-font-family-serif: Georgia, "Times New Roman", Times, "Times New Roman", serif;
+$b4e-font-family-monospace: $font-family-monospace;
+$b4e-font-families: (
+    "sans-serif": $b4e-font-family-sans-serif,
+    "serif": $b4e-font-family-serif,
+    "monospace": $b4e-font-family-monospace,
+);
+
+
+$b4e-font-weight-100: 100;
+$b4e-font-weight-200: 200;
+$b4e-font-weight-300: 300;
+$b4e-font-weight-400: 400;
+$b4e-font-weight-500: 500;
+$b4e-font-weight-600: 600;
+$b4e-font-weight-700: 700;
+$b4e-font-weight-normal: normal;
+$b4e-font-weight-bold: bold;
+$b4e-font-weight-bolder: bolder;
+$b4e-font-weight-lighter: lighter;
+$b4e-font-weights: (
+    "100": $b4e-font-weight-100,
+    "200": $b4e-font-weight-200,
+    "300": $b4e-font-weight-300,
+    "400": $b4e-font-weight-400,
+    "500": $b4e-font-weight-500,
+    "600": $b4e-font-weight-600,
+    "700": $b4e-font-weight-700,
+    "normal": $b4e-font-weight-normal,
+    "bold": $b4e-font-weight-bold,
+    "bolder": $b4e-font-weight-bolder,
+    "lighter": $b4e-font-weight-lighter
+);
+
+
+$b4e-font-style-normal: normal;
+$b4e-font-style-italic: italic;
+$b4e-font-style-oblique: oblique;
+$b4e-font-styles: (
+    "normal": $b4e-font-style-normal,
+    "italic": $b4e-font-style-italic,
+    "oblique": $b4e-font-style-oblique
+);
+
+
+$b4e-text-decoration-none: none;
+$b4e-text-decoration-underline: underline;
+$b4e-text-decoration-overline: overline;
+$b4e-text-decoration-line-through: line-through;
+$b4e-text-decorations: (
+    "none": $b4e-text-decoration-none,
+    "underline": $b4e-text-decoration-underline,
+    "overline": $b4e-text-decoration-overline,
+    "line-through": $b4e-text-decoration-line-through
+);
+
+
+$b4e-text-transform-none: none;
+$b4e-text-transform-capitalize: capitalize;
+$b4e-text-transform-uppercase: uppercase;
+$b4e-text-transform-lowercase: lowercase;
+$b4e-text-transforms: (
+    "none": $b4e-text-transform-none,
+    "caplitalize": $b4e-text-transform-capitalize,
+    "uppercase": $b4e-text-transform-uppercase,
+    "lowercase": $b4e-text-transform-lowercase
+);

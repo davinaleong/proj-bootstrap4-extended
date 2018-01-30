@@ -7,113 +7,578 @@
     <meta name="author" content="Davina Leong">
     <meta name="keywords" content="web,design,html,css,html5,development,bootstrap,reactjs,npm,gulp,sass">
 
-    <meta name="copyright" content="React Bootstrap 4">
+    <meta name="copyright" content="Bootstrap 4 Extended">
     <link rel="copyright" href="copyright.html">
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <link href="dist/styles/vendor.min.css" rel="stylesheet">
+    <link href="dist/styles/b4e-main.min.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
-    <title>React Bootstrap 4</title>
+    <title>Bootstrap 4 Extended</title>
+
+    <style>
+        body {
+            position: relative;
+        }
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        .shade-eee {
+            background: #eee;
+        }
+    </style>
 </head>
 
 <body>
 <div class="container">
-    <h1 class="display-1">React Bootstrap 4</h1>
-    <p class="lead mb-3"><a href="./" class="badge badge-secondary"><i class="fas fa-home fa-fw"></i> index</a> <a href="rb4-app.html">rb4-app</a> <a href="rb4-extra.html">rb4-extra</a></p>
+    <h1 id="b4e-top" class="display-1 mb-3">Bootstrap 4 Extended</h1>
 
-    <section class="card border-primary mb-3">
-        <h3 class="card-header bg-primary text-light">
-            <i class="fab fa-css3 fa-fw"></i> Bootstrap 4
-        </h3>
-        <div class="card-body">
-            <div>
-                <h4>Modal</h4>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Launch demo modal
-                </button>
-            </div>
+    <ul class="nav bg-light mb-3">
+        <li class="nav-item">
+            <a class="nav-link active" href="#b4e-section-font">Font Families, Weights and Styles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#b4e-section-text">Text Decorations &amp; Transforms</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#b4e-section-color">More Colors</a>
+        </li>
+    </ul>
 
-            <div>
-                <h4>Buttons</h4>
-                <button type="button" class="btn btn-primary">
-                    Primary
-                </button>
-                <button type="button" class="btn btn-outline-danger">
-                    Danger Outline
-                </button>
-                <button type="button" class="btn btn-secondary btn-sm">
-                    Small
-                </button>
-            </div>
+    <section id="b4e-section-font" class="mb-5">
+        <h2 class="mb-3">Font Families, Weights and Styles <small><a href="#b4e-top">Top</a></small></h2>
 
-            <div>
-                <h4>Badges</h4>
-                <p>
-                    <span class="badge badge-primary">Primary</span>
-                    <span class="badge badge-pill badge-secondary">Secondary</span>
-                </p>
+        <div id="b4e-card-ff" class="card mb-3">
+            <h5 class="card-header">Font Families</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Font Family</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="b4e-font-family-sans-serif">sans-serif</span></td>
+                            <td><code>b4e-font-family-sans-serif</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-font-family-serif">serif</span></td>
+                            <td><code>b4e-font-family-serif</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-font-family-monospace">monospace</span></td>
+                            <td><code>b4e-font-family-monospace</code></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="card-footer text-right">
-            <small><a href="https://getbootstrap.com/" target="_blank">Website</a></small>
+
+        <div id="b4e-card-fw" class="card mb-3">
+            <h5 class="card-header">Font Weights</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Font Weight</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="b4e-text-weight-100">100</span></td>
+                                    <td><code>b4e-text-weight-100</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-200">200</span></td>
+                                    <td><code>b4e-text-weight-200</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-300">300</span></td>
+                                    <td><code>b4e-text-weight-300</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-400">400</span></td>
+                                    <td><code>b4e-text-weight-400</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-500">500</span></td>
+                                    <td><code>b4e-text-weight-500</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-600">600</span></td>
+                                    <td><code>b4e-text-weight-600</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-weight-700">700</span></td>
+                                    <td><code>b4e-text-weight-700</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Weight</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="b4e-text-normal">normal</span></td>
+                                    <td><code>b4e-text-normal</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-bold">bold</span></td>
+                                    <td><code>b4e-text-bold</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-bolder">bolder</span></td>
+                                    <td><code>b4e-text-bolder</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-lighter">lighter</span></td>
+                                    <td><code>b4e-text-lighter</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="b4e-card-fs" class="card mb-3">
+            <h5 class="card-header">Font Styles</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Font Style</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td><span class="b4e-text-style-normal">normal</span></td>
+                            <td><code>b4e-text-style-normal</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-italic">italic</span></td>
+                            <td><code>b4e-text-italic</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-oblique">oblique</span></td>
+                            <td><code>b4e-text-oblique</code></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </section>
 
-    <section class="card border-success mb-3">
-        <h3 class="card-header bg-success text-light">
-            <i class="fas fa-flag fa-fw"></i> Font Awesome
-        </h3>
-        <div class="card-body">
-            <div>
-                <h4>Some Icons</h4>
-                <p>
-                    <i class="fas fa-user fa-2x"></i> <i class="fab fa-css3"></i>
-                </p>
+    <section id="b4e-section-text" class="mb-5">
+        <h2 class="mb-3">Text Decorations &amp; Transforms <small><a href="#b4e-top">Top</a></small></h2>
+
+        <div id="b4e-card-td" class="card mb-3">
+            <h5 class="card-header">Text Decorations</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Text Decoration</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="b4e-text-decoration-none">none</span></td>
+                            <td><code>b4e-text-decoration-none</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-underline">underline</span></td>
+                            <td><code>b4e-text-underline</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-overline">overline</span></td>
+                            <td><code>b4e-text-overline</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-line-through">line-through</span></td>
+                            <td><code>b4e-text-line-through</code></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="card-footer text-right">
-            <small><a href="https://fontawesome.com/" target="_blank">Website</a></small>
+
+        <div id="b4e-card-tt" class="card mb-3">
+            <h5 class="card-header">Text Transforms</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Text Transform</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="b4e-text-transform-none">none</span></td>
+                            <td><code>b4e-text-transform-none</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-caplitalize">caplitalize</span></td>
+                            <td><code>b4e-text-caplitalize</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-uppercase">uppercase</span></td>
+                            <td><code>b4e-text-uppercase</code></td>
+                        </tr>
+                        <tr>
+                            <td><span class="b4e-text-lowercase">lowercase</span></td>
+                            <td><code>b4e-text-lowercase</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
-    <section class="card border-warning mb-3">
-        <h3 class="card-header bg-warning text-dark">
-            <i class="fab fa-react fa-fw"></i> React
-        </h3>
-        <div class="card-body">
-            <div id="rb4-test">
-                <p class="text-danger">React is NOT working.</p>
+    <section id="b4e-section-color" class="mb-5">
+        <h2 class="mb-3">More Colors <small><a href="#b4e-top">Top</a></small></h2>
+
+        <div id="b4e-card-ct" class="card mb-3">
+            <h5 class="card-header">Text</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5>Basic</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="b4e-text-black">Black</span></td>
+                                    <td><code>b4e-text-black</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-white bg-black">White</span></td>
+                                    <td><code>b4e-text-white</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-red">Red</span></td>
+                                    <td><code>b4e-text-red</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-yellow bg-black">Yellow</span></td>
+                                    <td><code>b4e-text-yellow</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-green">Green</span></td>
+                                    <td><code>b4e-text-green</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-cyan">Cyan</span></td>
+                                    <td><code>b4e-text-cyan</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-blue">Blue</span></td>
+                                    <td><code>b4e-text-blue</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-magenta">Magenta</span></td>
+                                    <td><code>b4e-text-magneta</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col">
+                        <h5>Extended Bootstrap</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="b4e-text-indigo">Indigo</span></td>
+                                    <td><code>b4e-text-indigo</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-purple">Purple</span></td>
+                                    <td><code>b4e-text-purple</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-pink">Pink</span></td>
+                                    <td><code>b4e-text-pink</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-orange">Orange</span></td>
+                                    <td><code>b4e-text-orange</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="b4e-text-teal">Teal</span></td>
+                                    <td><code>b4e-text-teal</code></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                        <small class="b4e-text-italic b4e-text-muted">Note: Default Bootstrap theme colours retain their theme names; e.g. <code>b4e-text-primary</code> for <span class="b4e-text-primary">Blue-colored</span> text.</small>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card-footer text-right">
-            <small><a href="https://reactjs.org/" target="_blank">Website</a> | <a href="rb4-app.html">rb4-app</a></small>
+
+        <div id="b4e-card-cbg" class="card mb-3">
+            <h5 class="card-header">Background</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5>Basic</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="bg-black b4e-text-white">Black</span></td>
+                                    <td><code>bg-black</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-white bg-black">White</span></td>
+                                    <td><code>bg-white</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-red b4e-text-black">Red</span></td>
+                                    <td><code>bg-red</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-yellow b4e-text-black">Yellow</span></td>
+                                    <td><code>bg-yellow</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-green b4e-text-black">Green</span></td>
+                                    <td><code>bg-green</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-cyan b4e-text-black">Cyan</span></td>
+                                    <td><code>bg-cyan</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-blue b4e-text-white">Blue</span></td>
+                                    <td><code>bg-blue</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-magenta b4e-text-black">Magenta</span></td>
+                                    <td><code>bg-magneta</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col">
+                        <h5>Extended Bootstrap</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="bg-indigo b4e-text-white">Indigo</span></td>
+                                    <td><code>bg-indigo</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-purple b4e-text-white">Purple</span></td>
+                                    <td><code>bg-purple</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-pink b4e-text-black">Pink</span></td>
+                                    <td><code>bg-pink</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-orange b4e-text-black">Orange</span></td>
+                                    <td><code>bg-orange</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="bg-teal b4e-text-black">Teal</span></td>
+                                    <td><code>bg-teal</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="b4e-card-cbr" class="card mb-3">
+            <h5 class="card-header">Border</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5>Basic</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="border border-black shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-black</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="bg-black"><span class="border border-white shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-white</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-red shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-red</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-yellow shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-yellow</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-green shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-green</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-cyan shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-cyan</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-blue shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-blue</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-magenta shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-magneta</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col">
+                        <h5>Extended Bootstrap</h5>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Class</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="border border-indigo shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-indigo</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-purple shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-purple</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-pink shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-pink</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-orange shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-orange</code></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="border border-teal shade-eee">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+                                    <td><code>border border-teal</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div id="b4e-card-cc" class="card mb-3">
+            <h5 class="card-header">Cards</h5>
+            <div class="card-body">
+                <h6>Background Color</h6>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <div class="card bg-yellow b4e-text-black">
+                            <h5 class="card-header">Basic Sample</h5>
+                            <div class="card-body">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </div>
+                        </div>
+                        <p>Class: <code>bg-yellow b4e-text-black</code></p>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card bg-purple b4e-text-white">
+                            <h5 class="card-header">Extended Bootstrap Sample</h5>
+                            <div class="card-body">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </div>
+                        </div>
+                        <p>Class: <code>bg-purple b4e-text-white</code></p>
+                    </div>
+                </div>
+
+                <h6>Border Color</h6>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card border-yellow b4e-text-black">
+                            <h5 class="card-header">Basic Sample</h5>
+                            <div class="card-body">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </div>
+                        </div>
+                        <p>Class: <code>border-yellow b4e-text-black</code></p>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card border-purple b4e-text-black">
+                            <h5 class="card-header">Extended Bootstrap Sample</h5>
+                            <div class="card-body">
+                                Some quick example text to build on the card title and make up the bulk of the card's content.
+                            </div>
+                        </div>
+                        <p>Class: <code>border-purple b4e-text-black</code></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
 
     <footer class="text-right text-muted mb-5 border-top">
-        <p><small><em>React Bootstrap 4 &copy; Davina Leong 2018. <a href="copyright.html">Copyright</a></em></small></p>
+        <p><small><em>Bootstrap 4 Extended &copy; Davina Leong 2018. <a href="copyright.html">Copyright</a></em> | <a href="#b4e-top">Top</a></small></p>
     </footer>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            ...
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        </div>
-    </div>
 </div>
 
 <script src="dist/scripts/vendor.min.js"></script>

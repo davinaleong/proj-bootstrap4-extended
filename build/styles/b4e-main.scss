@@ -1,0 +1,57 @@
+@import "b4e-variables";
+
+@each $font-family, $ff-value in $b4e-font-families {
+    .#{$b4e-prefix}-font-family-#{$font-family} {
+        font-family: #{$ff-value};
+    }
+}
+
+@each $font-weight, $fw-value in $b4e-font-weights {
+    @if type-of($fw-value) == "number" {
+        .#{$b4e-prefix}-text-weight-#{$font-weight} {
+            font-weight: #{$fw-value};
+        }
+    } @else {
+        .#{$b4e-prefix}-text-#{$font-weight} {
+            font-weight: #{$fw-value};
+        }
+    }
+}
+
+@each $font-style, $fs-value in $b4e-font-styles {
+    @if $fs-value == "normal" {
+        .#{$b4e-prefix}-text-style-#{$font-style} {
+            font-style: #{$fs-value};
+        }
+    } @else {
+        .#{$b4e-prefix}-text-#{$font-style} {
+            font-style: #{$fs-value};
+        }
+    }
+}
+
+@each $text-decoration, $td-value in $b4e-text-decorations {
+    @if $td-value == "none" {
+        .#{$b4e-prefix}-text-decoration-#{$text-decoration} {
+            text-decoration: #{$td-value};
+        }
+    } @else {
+        .#{$b4e-prefix}-text-#{$text-decoration} {
+            text-decoration: #{$td-value};
+        }
+    }
+}
+
+@each $text-transform, $tt-value in $b4e-text-transforms {
+    @if $tt-value == "none" {
+        .#{$b4e-prefix}-text-transform-#{$text-transform} {
+            text-transform: #{$tt-value};
+        }
+    } @else {
+        .#{$b4e-prefix}-text-#{$text-transform} {
+            text-transform: #{$tt-value};
+        }
+    }
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
