@@ -3,7 +3,9 @@ const PATHS = {
 
     dist: 'dist/',
     distScripts: 'dist/scripts/',
-    distStyles: 'dist/styles',
+    distStyles: 'dist/styles/',
+
+    distHandlebars: 'dist/handlebars/',
 
     build: 'build/',
     buildScripts: 'build/scripts/',
@@ -49,13 +51,6 @@ gulp.task('vendor-styles', ['vendor-clear-styles'], () => {
     .pipe(debug({title: 'vendor minified styles'}))
     .pipe(concat('vendor.min.css'))
     .pipe(gulp.dest(PATHS.distStyles));
-
-    //copy bootstrap sass
-    // gulp.src([
-    //     PATHS.nodeModules + 'bootstrap/scss/_variables.scss'
-    // ])
-    // .pipe(debug({title: 'bootstrap variables'}))
-    // .pipe(gulp.dest(PATHS.buildStyles));
 });
 
 gulp.task('vendor-clear-styles', () => {
@@ -93,6 +88,24 @@ gulp.task('vendor-clear-scripts', () => {
         PATHS.distScripts + 'vendor.js',
         PATHS.distScripts + 'vendor.min.js',
         '!' + PATHS.distScripts
+    ]);
+});
+
+gulp.task('vendor-handlebars', ['vendor-clear-handlebars'], () => {
+    gulp.src([
+        PATHS.nodeModules + 'handlebars/dist/handlebars.js',
+        PATHS.nodeModules + 'handlebars/dist/handlebars.min.js',
+        PATHS.nodeModules + 'handlebars/dist/handlebars.runtime.js',
+        PATHS.nodeModules + 'handlebars/dist/handlebars.runtime.min.js'
+    ])
+    .pipe(debug({title: 'copy handlebars'}))
+    .pipe(gulp.dest(PATHS.distHandlebars));
+});
+
+gulp.task('vendor-clear-handlebars', () => {
+    del.sync([
+        PATHS.distHandlebars + '**/*.*',
+        '!' + PATHS.distHandlebars
     ]);
 });
 /*** end:   Vendor ***/

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Davina Leong">
+    <meta name="keywords" content="web,design,html,css,html5,development,bootstrap,reactjs,npm,gulp,sass">
+
+    <meta name="copyright" content="Bootstrap 4 Extended">
+    <link rel="copyright" href="copyright.html">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link href="dist/styles/b4e-main.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <title>Bootstrap 4 Extended</title>
+
+    <style>
+        body {
+            position: relative;
+        }
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+        
+        .shade-eee {
+            background: #eee;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
+<div class="container-fluid">
+    <h1 id="top" class="display-2 text-secondary mb-3">Bootstrap 4 Extended</h1>
+    <p><span class="badge badge-primary">Handlebars</span></p>
+
+    <div class="row">
+        <!-- content col start -->
+        <div id="contentTemplate" class="col-8"></div>
+        <!-- content col end -->
+
+        <!-- nav col start -->
+        <div class="col-4">
+            <nav id="navbar" class="navbar navbar-light bg-light d-block position-sticky sticky-top">
+                <a class="navbar-brand" href="#">ScrollSpy Demo</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#section-font">Font Families, Weights and Styles</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#card-font-families">Font Family</a>
+                        <a class="nav-link ml-3 my-1" href="#card-font-weights">Font Weight</a>
+                        <a class="nav-link ml-3 my-1" href="#card-font-styles">Font Style</a>
+                    </nav>
+                </nav>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#section-text">Text Decorations and Transforms</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#card-text-decorations">Text Decoration</a>
+                        <a class="nav-link ml-3 my-1" href="#card-text-transforms">Text Transform</a>
+                    </nav>
+                </nav>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#section-color">More Colors</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="#card-color-text">Text Color</a>
+                        <a class="nav-link ml-3 my-1" href="#card-color-bg">Background Color</a>
+                        <a class="nav-link ml-3 my-1" href="#card-color-border">Border Color</a>
+                        <a class="nav-link ml-3 my-1" href="#card-color-card">Card Color</a>
+                    </nav>
+                </nav>
+                <a class="nav-link text-secondary" href="#top">Back to Top</a>
+            </nav>
+        </div>
+        <!-- nav col end -->
+    </div>
+
+
+    <footer class="text-right text-muted mb-5 border-top">
+        <p><small><em id="b4e-copyright">Bootstrap 4 Extended &copy; Davina Leong 2018. <a href="copyright.html">Copyright</a></em> | <a href="#b4e-top">Top</a></small></p>
+    </footer>
+</div>
+
+<script src="dist/scripts/vendor.min.js"></script>
+<script src="dist/scripts/b4e-updateCopyright.min.js"></script>
+
+<!-- Handlebars -->
+<script src="dist/scripts/b4e-contentContext.min.js"></script>
+</body>
+</html>
