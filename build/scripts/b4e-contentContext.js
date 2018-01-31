@@ -1,3 +1,8 @@
+/* Compile commands:
+ * handlebars build/templates -f dist/scripts/hbs-templates.js -e 'hbs'
+ * handlebars build/templates -f dist/scripts/hbs-templates.min.js -m -e 'hbs'
+ */
+
 const CONTENT = {
     sectionContent: [
         {

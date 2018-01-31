@@ -85,6 +85,12 @@
 <script src="dist/scripts/b4e-updateCopyright.min.js"></script>
 
 <!-- Handlebars -->
+<script src="dist/handlebars/handlebars.runtime.min.js"></script>
 <script src="dist/scripts/b4e-contentContext.min.js"></script>
+<script src="dist/scripts/hbs-templates.min.js"></script>
+<script>
+    let precompiledHtml = Handlebars.templates['section'];
+    $('#contentTemplate').html(precompiledHtml(CONTENT));
+</script>
 </body>
 </html>
