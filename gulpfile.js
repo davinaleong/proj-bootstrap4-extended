@@ -4,12 +4,10 @@ const PATHS = {
     dist: 'dist/',
     distScripts: 'dist/scripts/',
     distStyles: 'dist/styles',
-    distReact: 'dist/react',
 
     build: 'build/',
     buildScripts: 'build/scripts/',
-    buildStyles: 'build/styles/',
-    buildReact: 'build/react/'
+    buildStyles: 'build/styles/'
 };
 
 let gulp = require('gulp'),
@@ -18,14 +16,16 @@ let gulp = require('gulp'),
 
     cleanCss = require('gulp-clean-css'),
     sass = require('gulp-sass'),
+    uglify = require('gulp-uglify'),
+    uglifyEs = require('gulp-uglify-es').default,
 
     debug = require('gulp-debug'),
     del = require('del');
 
 /*** start: Main Tasks ***/
-gulp.task('default', ['vendor-scripts', 'styles-compile']);
+gulp.task('default', ['vendor-scripts', 'styles-compile', 'scripts-compile']);
 
-gulp.task('watch', ['vendor-scripts', 'styles-watch']);
+gulp.task('watch', ['vendor-scripts', 'styles-watch', 'scripts-watch']);
 /*** end:   Main Tasks ***/
 
 /*** start: Vendor ***/
@@ -108,10 +108,8 @@ gulp.task('styles-sass', () => {
     gulp.src(PATHS.buildStyles + '**/*.scss')
         .pipe(debug({title: 'sass'}))
         .pipe(sass())
-        .pipe(gulp.dest(PATHS.distStyles));
-        
-    gulp.src(PATHS.buildStyles + '**/*.scss')
-        .pipe(debug({title: 'sass'}))
+        .pipe(gulp.dest(PATHS.distStyles))
+        .pipe(debug({title: 'sass minified'}))
         .pipe(sass())
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(rename({suffix: '.min'}))
@@ -122,11 +120,38 @@ gulp.task('styles-clear', () => {
     del.sync([
         '!' + PATHS.distStyles + 'vendor.css',
         '!' + PATHS.distStyles + 'vendor.min.css',
-        PATHS.distStyles + '**/rb4*.css',
+        PATHS.distStyles + '**/b4e*.css',
         '!' + PATHS.distStyles
     ]);
 });
 /*** end:   Styles ***/
 
-/*** start: React ***/
-/*** end:   React ***/
+/*** start: Scripts ***/
+gulp.task('scripts-watch', ['scripts-compile'], () => {
+    gulp.watch(PATHS.buildScripts + '**/*.js', ['scripts-compile']);
+});
+
+gulp.task('scripts-compile', ['scripts-clear'], () => {
+    gulp.src(PATHS.buildScripts + '**/*.js')
+        .pipe(debug({title: 'scripts'}))
+        .pipe(gulp.dest(PATHS.distScripts));
+
+    gulp.src(PATHS.buildScripts + '**/*.js')
+        .pipe(debug({title: 'minified scripts'}))
+        .pipe(uglifyEs())
+        .pipe(rename({
+            suffix: '.min',
+            extname: '.js'
+        }))
+        .pipe(gulp.dest(PATHS.distScripts));
+});
+
+gulp.task('scripts-clear', () => {
+    del.sync([
+        '!' + PATHS.distScripts + 'vendor.js',
+        '!' + PATHS.distScripts + 'vendor.min.js',
+        PATHS.distScripts + '**/b4e*.js',
+        '!' + PATHS.distScripts
+    ]);
+});
+/*** end:   Scripts ***/
