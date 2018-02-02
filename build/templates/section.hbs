@@ -1,7 +1,7 @@
-{{#each sectionContent}}
 <section id={{sectionId}} class="mb-5">
     <h2 class="mb-3">{{sectionTitle}}</h2>
 
-    
+    {{#each cardContent.card}}
+        {{> card}}
+    {{/each}}
 </section>
-{{/each}}
