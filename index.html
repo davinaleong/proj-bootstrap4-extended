@@ -15,34 +15,21 @@
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
     <title>Bootstrap 4 Extended</title>
-
-    <style>
-        body {
-            position: relative;
-        }
-        ul.nav-pills {
-            top: 20px;
-            position: fixed;
-        }
-        
-        .shade-eee {
-            background: #eee;
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
-<div class="container-fluid">
-    <h1 id="top" class="display-2 text-secondary mb-3">Bootstrap 4 Extended</h1>
-
+<section id="header" class="text-light bg-primary p-2 mb-3">
+    <h1 id="top" class="display-2">Bootstrap 4 Extended</h1>
+</section>
+<section id="content" class="container-fluid">
     <div class="row">
         <!-- content col start -->
         <div class="col-8">
             <section id="section-font" class="mb-5">
-                <h2 class="mb-3">Font Families, Weights and Styles</h2>
+                <h2 class="mb-3 text-dark">Font Families, Weights and Styles</h2>
         
                 <div id="card-font-families" class="card mb-3">
-                    <h5 class="card-header">Font Families</h5>
+                    <h5 class="card-header text-dark">Font Families</h5>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -70,7 +57,7 @@
                 </div>
         
                 <div id="card-font-weights" class="card mb-3">
-                    <h5 class="card-header">Font Weights</h5>
+                    <h5 class="card-header text-dark">Font Weights</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -146,7 +133,7 @@
                 </div>
         
                 <div id="card-font-styles" class="card mb-3">
-                    <h5 class="card-header">Font Styles</h5>
+                    <h5 class="card-header text-dark">Font Styles</h5>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -175,10 +162,10 @@
             </section>
         
             <section id="section-text" class="mb-5">
-                <h2 class="mb-3">Text Decorations &amp; Transforms</h2>
+                <h2 class="mb-3 text-dark">Text Decorations &amp; Transforms</h2>
         
                 <div id="card-text-decorations" class="card mb-3">
-                    <h5 class="card-header">Text Decorations</h5>
+                    <h5 class="card-header text-dark">Text Decorations</h5>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -210,7 +197,7 @@
                 </div>
         
                 <div id="card-text-transforms" class="card mb-3">
-                    <h5 class="card-header">Text Transforms</h5>
+                    <h5 class="card-header text-dark">Text Transforms</h5>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -243,10 +230,10 @@
             </section>
         
             <section id="section-color" class="mb-5">
-                <h2 class="mb-3">More Colors</h2>
+                <h2 class="mb-3 text-dark">More Colors</h2>
         
                 <div id="card-color-text" class="card mb-3">
-                    <h5 class="card-header">Text</h5>
+                    <h5 class="card-header text-dark">Text</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -340,7 +327,7 @@
                 </div>
         
                 <div id="card-color-bg" class="card mb-3">
-                    <h5 class="card-header">Background</h5>
+                    <h5 class="card-header text-dark">Background</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -354,7 +341,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><span class="bg-black b4e-text-white">Black</span></td>
+                                            <td><span class="bg-black text-white">Black</span></td>
                                             <td><code>bg-black</code></td>
                                         </tr>
                                         <tr>
@@ -362,23 +349,23 @@
                                             <td><code>bg-white</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-red b4e-text-black">Red</span></td>
+                                            <td><span class="bg-red text-black">Red</span></td>
                                             <td><code>bg-red</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-yellow b4e-text-black">Yellow</span></td>
+                                            <td><span class="bg-yellow text-black">Yellow</span></td>
                                             <td><code>bg-yellow</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-green b4e-text-black">Green</span></td>
+                                            <td><span class="bg-green text-black">Green</span></td>
                                             <td><code>bg-green</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-cyan b4e-text-black">Cyan</span></td>
+                                            <td><span class="bg-cyan text-black">Cyan</span></td>
                                             <td><code>bg-cyan</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-blue b4e-text-white">Blue</span></td>
+                                            <td><span class="bg-blue text-white">Blue</span></td>
                                             <td><code>bg-blue</code></td>
                                         </tr>
                                         <tr>
@@ -400,23 +387,23 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><span class="bg-indigo b4e-text-white">Indigo</span></td>
+                                            <td><span class="bg-indigo text-white">Indigo</span></td>
                                             <td><code>bg-indigo</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-purple b4e-text-white">Purple</span></td>
+                                            <td><span class="bg-purple text-white">Purple</span></td>
                                             <td><code>bg-purple</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-pink b4e-text-black">Pink</span></td>
+                                            <td><span class="bg-pink text-black">Pink</span></td>
                                             <td><code>bg-pink</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-orange b4e-text-black">Orange</span></td>
+                                            <td><span class="bg-orange text-black">Orange</span></td>
                                             <td><code>bg-orange</code></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="bg-teal b4e-text-black">Teal</span></td>
+                                            <td><span class="bg-teal text-black">Teal</span></td>
                                             <td><code>bg-teal</code></td>
                                         </tr>
                                     </tbody>
@@ -427,7 +414,7 @@
                 </div>
         
                 <div id="card-color-border" class="card mb-3">
-                    <h5 class="card-header">Border</h5>
+                    <h5 class="card-header text-dark">Border</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -515,7 +502,7 @@
                 <br>
         
                 <div id="card-color-card" class="card mb-3">
-                    <h5 class="card-header">Cards</h5>
+                    <h5 class="card-header text-dark">Cards</h5>
                     <div class="card-body">
                         <h6>Background Color</h6>
                         <div class="row mb-3">
@@ -596,7 +583,7 @@
                         <a class="nav-link ml-3 my-1" href="#card-color-card">Card Color</a>
                     </nav>
                 </nav>
-                <a class="nav-link text-secondary" href="#top">Back to Top</a>
+                <a class="nav-link text-dark" href="#top">Back to Top</a>
             </nav>
         </div>
         <!-- nav col end -->
@@ -606,7 +593,7 @@
     <footer class="text-right text-muted mb-5 border-top">
         <p><small><em id="b4e-copyright">Bootstrap 4 Extended &copy; Davina Leong 2018. <a href="copyright.html">Copyright</a></em> | <a href="#b4e-top">Top</a></small></p>
     </footer>
-</div>
+</section>
 
 <script src="dist/scripts/vendor.min.js"></script>
 <script src="dist/scripts/b4e-updateCopyright.min.js"></script>

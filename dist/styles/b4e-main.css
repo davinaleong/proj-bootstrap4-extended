@@ -7336,3 +7336,13 @@ a.text-teal:hover, a.text-teal:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
+
+body {
+  position: relative; }
+
+ul.nav-pills {
+  top: 20px;
+  position: fixed; }
+
+.shade-eee {
+  background: #eee; }
