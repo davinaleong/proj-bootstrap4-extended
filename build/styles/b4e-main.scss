@@ -55,3 +55,16 @@
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+    position: relative;
+}
+
+ul.nav-pills {
+    top: 20px;
+    position: fixed;
+}
+
+.shade-eee {
+    background: #eee;
+}

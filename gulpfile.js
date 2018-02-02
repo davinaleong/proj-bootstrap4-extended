@@ -10,6 +10,7 @@ const PATHS = {
     buildStyles: 'build/styles/'
 };
 
+
 let gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
@@ -22,11 +23,13 @@ let gulp = require('gulp'),
     debug = require('gulp-debug'),
     del = require('del');
 
+
 /*** start: Main Tasks ***/
 gulp.task('default', ['vendor-scripts', 'styles-compile', 'scripts-compile']);
 
 gulp.task('watch', ['vendor-scripts', 'styles-watch', 'scripts-watch']);
 /*** end:   Main Tasks ***/
+
 
 /*** start: Vendor ***/
 gulp.task('vendor', ['vendor-clear', 'vendor-styles', 'vendor-scripts']);
@@ -49,13 +52,6 @@ gulp.task('vendor-styles', ['vendor-clear-styles'], () => {
     .pipe(debug({title: 'vendor minified styles'}))
     .pipe(concat('vendor.min.css'))
     .pipe(gulp.dest(PATHS.distStyles));
-
-    //copy bootstrap sass
-    // gulp.src([
-    //     PATHS.nodeModules + 'bootstrap/scss/_variables.scss'
-    // ])
-    // .pipe(debug({title: 'bootstrap variables'}))
-    // .pipe(gulp.dest(PATHS.buildStyles));
 });
 
 gulp.task('vendor-clear-styles', () => {
@@ -97,6 +93,7 @@ gulp.task('vendor-clear-scripts', () => {
 });
 /*** end:   Vendor ***/
 
+
 /*** start: Styles ***/
 gulp.task('styles-watch', ['styles-compile'], () => {
     gulp.watch(PATHS.buildStyles + '**/*.scss', ['styles-compile']);
@@ -125,6 +122,7 @@ gulp.task('styles-clear', () => {
     ]);
 });
 /*** end:   Styles ***/
+
 
 /*** start: Scripts ***/
 gulp.task('scripts-watch', ['scripts-compile'], () => {
