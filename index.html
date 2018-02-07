@@ -11,8 +11,8 @@
     <link rel="copyright" href="copyright.html">
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <link href="dist/styles/b4e-main.min.css" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles/b4e-main.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 
     <title>Bootstrap 4 Extended</title>
 </head>
@@ -25,8 +25,19 @@
     <div class="row">
         <!-- content col start -->
         <div class="col-8">
+            <h3 class="mb-3 text-dark">How to Use</h3>
+            <section id="section-use">
+                <h5 class="text-dark">Out of the Box</h5>
+                <p>Copy over either the <code id="cssFilename">b4e-main.css</code> or <code id="cssMinFilename">b4e-main.min.css</code> into your project.</p>
+
+                <h5 class="text-dark">SASS</h5>
+                <p>Just import the <code id="sassVarFilename">_b4e-variables.scss</code> into your own SASS project and it will work.</p>
+            </section>
+            <hr class="mb-5">
+
+            <h3 class="text-dark">Demo</h3>
             <section id="section-font" class="mb-5">
-                <h2 class="mb-3 text-dark">Font Families, Weights and Styles</h2>
+                <h4 class="mb-3 text-dark">Font Families, Weights and Styles</h4>
         
                 <div id="card-font-families" class="card mb-3">
                     <h5 class="card-header text-dark">Font Families</h5>
@@ -162,7 +173,7 @@
             </section>
         
             <section id="section-text" class="mb-5">
-                <h2 class="mb-3 text-dark">Text Decorations &amp; Transforms</h2>
+                <h4 class="mb-3 text-dark">Text Decorations &amp; Transforms</h4>
         
                 <div id="card-text-decorations" class="card mb-3">
                     <h5 class="card-header text-dark">Text Decorations</h5>
@@ -230,7 +241,7 @@
             </section>
         
             <section id="section-color" class="mb-5">
-                <h2 class="mb-3 text-dark">More Colors</h2>
+                <h4 class="mb-3 text-dark">More Colors</h4>
         
                 <div id="card-color-text" class="card mb-3">
                     <h5 class="card-header text-dark">Text</h5>
@@ -558,7 +569,10 @@
         <!-- nav col start -->
         <div class="col-4">
             <nav id="navbar" class="navbar navbar-light bg-light d-block position-sticky sticky-top">
-                <a class="navbar-brand" href="#">ScrollSpy Demo</a>
+                <a class="navbar-brand" href="#">Bootstrap 4 Extended v0.1.1</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#section-use">How to Use</a>
+                </nav>
                 <nav class="nav nav-pills flex-column">
                     <a class="nav-link" href="#section-font">Font Families, Weights and Styles</a>
                     <nav class="nav nav-pills flex-column">
@@ -584,6 +598,12 @@
                     </nav>
                 </nav>
                 <a class="nav-link text-dark" href="#top">Back to Top</a>
+                <nav class="nav nav-pills flex-column">
+                    <span class="nav-link">External Links</span>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ml-3 my-1" href="http://getbootstrap.com/" target="_blank">Bootstrap 4 <i class="fas fa-external-link-alt fa-fw"></i></a>
+                    </nav>
+                </nav>
             </nav>
         </div>
         <!-- nav col end -->
