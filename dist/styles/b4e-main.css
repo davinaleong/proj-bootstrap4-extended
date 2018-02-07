@@ -7,46 +7,46 @@
 .b4e-font-family-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; }
 
-.b4e-text-weight-100 {
+.b4e-font-weight-100 {
   font-weight: 100; }
 
-.b4e-text-weight-200 {
+.b4e-font-weight-200 {
   font-weight: 200; }
 
-.b4e-text-weight-300 {
+.b4e-font-weight-300 {
   font-weight: 300; }
 
-.b4e-text-weight-400 {
+.b4e-font-weight-400 {
   font-weight: 400; }
 
-.b4e-text-weight-500 {
+.b4e-font-weight-500 {
   font-weight: 500; }
 
-.b4e-text-weight-600 {
+.b4e-font-weight-600 {
   font-weight: 600; }
 
-.b4e-text-weight-700 {
+.b4e-font-weight-700 {
   font-weight: 700; }
 
-.b4e-text-normal {
+.b4e-font-normal {
   font-weight: normal; }
 
-.b4e-text-bold {
+.b4e-font-bold {
   font-weight: bold; }
 
-.b4e-text-bolder {
+.b4e-font-bolder {
   font-weight: bolder; }
 
-.b4e-text-lighter {
+.b4e-font-lighter {
   font-weight: lighter; }
 
-.b4e-text-style-normal {
+.b4e-font-style-normal {
   font-style: normal; }
 
-.b4e-text-italic {
+.b4e-font-italic {
   font-style: italic; }
 
-.b4e-text-oblique {
+.b4e-font-oblique {
   font-style: oblique; }
 
 .b4e-text-decoration-none {
