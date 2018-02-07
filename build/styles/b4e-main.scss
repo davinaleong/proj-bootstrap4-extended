@@ -8,11 +8,11 @@
 
 @each $font-weight, $fw-value in $b4e-font-weights {
     @if type-of($fw-value) == "number" {
-        .#{$b4e-prefix}-text-weight-#{$font-weight} {
+        .#{$b4e-prefix}-font-weight-#{$font-weight} {
             font-weight: #{$fw-value};
         }
     } @else {
-        .#{$b4e-prefix}-text-#{$font-weight} {
+        .#{$b4e-prefix}-font-#{$font-weight} {
             font-weight: #{$fw-value};
         }
     }
@@ -20,11 +20,11 @@
 
 @each $font-style, $fs-value in $b4e-font-styles {
     @if $fs-value == "normal" {
-        .#{$b4e-prefix}-text-style-#{$font-style} {
+        .#{$b4e-prefix}-font-style-#{$font-style} {
             font-style: #{$fs-value};
         }
     } @else {
-        .#{$b4e-prefix}-text-#{$font-style} {
+        .#{$b4e-prefix}-font-#{$font-style} {
             font-style: #{$fs-value};
         }
     }
